@@ -63,6 +63,7 @@ export default {
     ** Build configuration
     */
     build: {
+        analyze:true,
         extractCSS: true,
         extend(config, ctx) {
         }

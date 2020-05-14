@@ -44,7 +44,6 @@
                 if (typeof result  === 'object') {
                     store.commit('pageData/setPage', result.data);
                     if (process.server) {
-                        console.log(req.headers.host);
                         store.commit('metaData/setHost', req.headers.host);
                     }
                     return {}
