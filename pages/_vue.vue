@@ -6,7 +6,7 @@
                 Launching your online business.
             </h2>
             <h2 class="subtitle">
-                {{host}}
+                host: {{host}}
             </h2>
             <div class="links">
                 <a
@@ -39,10 +39,11 @@
         async fetch ({store,  params, req, res}) {
 
             try {
-                //@TODO: HOW TO WE GET THE HOST IN HERE???
                 if (process.server) {
                     store.commit('metaData/setHost', req.headers.host);
-                    const result = await axios.get('http://localhost:3000/datastore/data/' + req.headers.host);
+                    //const url = 'http://localhost:3000/datastore/data/' + req.headers.host + req.originalUrl;
+                    const url = "https://windsockui-datastore.herokuapp.com/data/www.windsockui.com/"
+                    const result = await axios.get(url);
                     if (typeof result  === 'object') {
                         store.commit('pageData/setPage', result.data);
                         return {}
@@ -56,13 +57,12 @@
         },
         computed: {
             host: function() {
-                return this.$store.state.metaData.host
+                return this.$store.getters['metaData/getHost'];
             }
         },
         head() {
             return {
-                //@TODO: This is ugly. Create nicer methods in the store
-                title: this.$store.state.pageData.page.json.page.title
+                title: this.$store.getters['pageData/getPageTitle']
             }
         }
     }

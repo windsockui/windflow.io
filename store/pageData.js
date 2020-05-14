@@ -5,6 +5,13 @@ export const state = () => ({
 export const getters = {
     getPage: state => {
         return state.page;
+    },
+    getPageTitle: state => {
+        try {
+            return state.page.json.page.title;
+        } catch (e) {
+            return null;
+        }
     }
 };
 
