@@ -40,13 +40,13 @@
 
             try {
                 //@TODO: HOW TO WE GET THE HOST IN HERE???
-                const result = await axios.get('http://localhost:3000/datastore/data/www.windsockui.com');
-                if (typeof result  === 'object') {
-                    store.commit('pageData/setPage', result.data);
-                    if (process.server) {
-                        store.commit('metaData/setHost', req.headers.host);
+                if (process.server) {
+                    store.commit('metaData/setHost', req.headers.host);
+                    const result = await axios.get('http://localhost:3000/datastore/data/' + req.headers.host);
+                    if (typeof result  === 'object') {
+                        store.commit('pageData/setPage', result.data);
+                        return {}
                     }
-                    return {}
                 }
                 throw "Unexpected result from server"
             } catch (error) {
@@ -62,7 +62,7 @@
         head() {
             return {
                 //@TODO: This is ugly. Create nicer methods in the store
-                title: this.$store.state.pageData.page.json.page.title + this.host
+                title: this.$store.state.pageData.page.json.page.title
             }
         }
     }
