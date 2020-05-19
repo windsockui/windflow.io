@@ -8,7 +8,21 @@ module.exports = {
     purge: [
         './src/**/*.vue'
     ],
-  theme: {},
-  variants: {},
-  plugins: []
+    theme: {
+        container: {
+            padding: '2rem',
+        },
+        extend: {
+            spacing: {
+                '96': '24rem',
+                '128': '32rem',
+                '160': '40rem',
+            },
+            width: {
+                '3/10': '30%'
+            }
+        }
+    },
+    variants: {},
+    plugins: []
 }

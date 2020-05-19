@@ -3,3 +3,34 @@
 @import 'tailwindcss/components';
 /* purgecss end ignore */
 @import 'tailwindcss/utilities';
+
+.ubuntu {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.custom-shadow {
+    /* filter: drop-shadow(-1px 6px -3px rgba(50, 50, 0, 0.5)); */
+    box-shadow:    3px 3px 5px 6px #ccc;;
+}
+
+.slanted-bottom {
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% calc(100% - 5vw),
+        0 100%
+    );
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.raleway {
+    font-family: 'Raleway', sans-serif;
+}
+
+/*.height-half-screen {*/
+/*    height: 50%*/
+/*}*/
