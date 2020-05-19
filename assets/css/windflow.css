@@ -1,0 +1,33 @@
+.ubuntu {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.slanted-bottom {
+
+    clip-path: polygon(
+            0 0,
+            100% 0,
+            100% calc(100% - 5vw),
+            0 100%
+    );
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.inter {
+    font-family: 'Inter', sans-serif;
+}
+
+.background {
+    background-image: url('https://refactoringui.com/img/hero-pattern.svg')
+}
+
+.inner-shadow {
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.2)
+}
+
+.transition {
+    transition: all 0.15s ease-in-out;
+}

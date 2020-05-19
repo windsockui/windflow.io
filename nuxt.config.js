@@ -12,7 +12,7 @@ export default {
         ],
         link: [
             {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
-            {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;400&family=Ubuntu:wght@400;500&family=Raleway:wght@700'},
+            {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;400&family=Ubuntu:wght@400;500&family=Inter:wght@700'},
 
         ]
     },
@@ -68,7 +68,7 @@ export default {
     purgeCSS: {
         whitelist: 'a, .font-mono .h-24 .h-36 .h-48',
         whitelistPatterns: [/svg.*/],
-        purgeCSSInDev: true,
+        purgeCSSInDev: false,
         enabled: true
     },
     /*
