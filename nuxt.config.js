@@ -61,7 +61,7 @@ export default {
             solid: [
                 'faGripVertical', 'faUpload', 'faTimes', 'faSave', 'faUndoAlt', 'faCamera',
                 'faCheck', 'faExclamationTriangle', 'faSyncAlt', 'faArrowUp', 'faArrowDown', 'faTrashAlt',
-                'faPlus', 'faAngleRight', 'faChevronRight', 'faTint', 'faCheckCircle', 'faTimesCircle', 'faQuestion', 'faPlay'
+                'faPlus', 'faAngleRight', 'faChevronRight', 'faCheckCircle', 'faTimesCircle', 'faQuestion', 'faPlay'
             ]
         }
     },
